@@ -3,7 +3,8 @@
 
 #define STD_ON	1
 #define STD_OFF	0
-
+#define FALSE 0
+#define TRUE 1
 typedef unsigned char uint8;
 typedef unsigned short int uint16;
 
@@ -80,18 +81,10 @@ typedef struct
 
 typedef struct
 {
-
-
-}BswMLogicalExpressionType, *BswMLogicalExpressionRefType;
-
-
-typedef struct
-{
 	BswMRuleInitStateType BswMRuleInitState;
 	BswMLogicalExpressionIdType BswMLogicalExpressionId;
 	BswMRuleActionListIdType BswMRuleFalseActionListId;
 	BswMRuleActionListIdType BswMRuleTrueActionListId;
-
 }BswMRuleType, *BswMRuleRefType;
 
 typedef struct
@@ -404,12 +397,12 @@ typedef struct
 		BswMRteSwitchType BswMRteSwitch;
 		BswMSchMSwitchType BswMSchMSwitch;
 	}BswMAction;
-}BswMAvailableActionsType, *BswMAvailableActionsRefType;
+}BswMActionType, *BswMActionRefType, BswMAvailableActionsType, *BswMAvailableActionsRefType;
 
-typedef struct
-{
-	BswMAvailableActionsType BswMAvailableActions;
-}BswMActionType, *BswMActionRefType;
+//typedef struct
+//{
+//	BswMAvailableActionsType BswMAvailableActions;
+//}BswMActionType, *BswMActionRefType;
 
 typedef enum
 {
